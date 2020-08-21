@@ -12,8 +12,6 @@ namespace FarmSimulator
         static void Main(string[] args)
         {
             MenuManager.StartMenu();
-
-            Console.ReadLine();
         }
     }
 }
