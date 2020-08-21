@@ -8,18 +8,42 @@ namespace FarmSimulator
 {
     static class MenuManager
     {
-        //MENU INICIAL DONDE COMIENZA EL JUEGO
+        //INICO DEL PROGRAMA
         public static void StartMenu()
         {
-            Console.Write("");
+            Console.WriteLine("Bienvenido a FarmSimulator");
+            while (true)
+            {
+                Console.WriteLine("Ingresa una de las siguientes opciones:");
+                Console.WriteLine("1.- Crear un mapa.");
+                Console.WriteLine("2.- Salir.");
 
-            TerrainDesign();
+                string option = Console.ReadLine();
+
+                if (option == "1")
+                {
+                    Console.WriteLine("Creando nuevo mapa...");
+
+                    TerrainDesign();
+                }
+                else if (option == "2")
+                {
+                    Console.WriteLine("Cerrando FarmSimulator.");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Opcion invalida. Re ingrese otra alternativa.");
+                    continue;
+                }
+            }
+
         }
 
         //MENU PARA CREAR EL TERRENO
         public static void TerrainDesign()
         {
-
+            Map NuevoMapa = new Map();
         }
     }
 }
