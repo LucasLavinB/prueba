@@ -43,7 +43,15 @@ namespace FarmSimulator
         //MENU PARA CREAR EL TERRENO
         public static void TerrainDesign()
         {
-            Map NuevoMapa = new Map();
+            Map NewMap = new Map();
+            Console.WriteLine("1.- Agregar solo rio");
+            Console.WriteLine("2.- Agregar solo lago");
+            Console.WriteLine("3.- Agregar rio y lago");
+            Console.WriteLine("4.- No agregar nada");
+
+            string option2 = Console.ReadLine();
+
+            Newmap.
         }
     }
 }
