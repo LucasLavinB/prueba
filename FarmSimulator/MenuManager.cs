@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -44,14 +45,39 @@ namespace FarmSimulator
         public static void TerrainDesign()
         {
             Map NewMap = new Map();
-            Console.WriteLine("1.- Agregar solo rio");
-            Console.WriteLine("2.- Agregar solo lago");
-            Console.WriteLine("3.- Agregar rio y lago");
-            Console.WriteLine("4.- No agregar nada");
+           
+            while (true)
+            {
+                Console.WriteLine("1.- Agregar solo rio");
+                Console.WriteLine("2.- Agregar solo lago");
+                Console.WriteLine("3.- Agregar rio y lago");
+                Console.WriteLine("4.- No agregar nada");
+                string option2 = Console.ReadLine();
+                if (option2=="1")
+                {
+                    NewMap.GenerateMap(true, false);
+                    break;
+                }
+                else if ( option2=="2")
+                {
+                     NewMap.GenerateMap(false, true);
+                    break;
+                }
+                else if (option2=="3")
+                {
+                    NewMap.GenerateMap(true, true);
+                    break;
+                }
+                else if (option2 =="4")
+                {
+                    NewMap.GenerateMap(false, false);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Su opcion es invalida, ingrese una nueva opcion valida");
+                    continue;
+                }
+            }
 
-            string option2 = Console.ReadLine();
-
-            Newmap.
-        }
-    }
-}
+         }
