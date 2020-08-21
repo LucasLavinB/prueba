@@ -28,30 +28,53 @@ namespace FarmSimulator
         {
             Random randomNumber = new Random();
 
-            int positionYLake = randomNumber.Next(100);
-            int positionXLake = randomNumber.Next(100);
-
-            int sizeYLake = randomNumber.Next(15);
+            int positionYLake = randomNumber.Next(1000);
+            int positionXLake = randomNumber.Next(1000);
 
             int i = 0;
 
-            while (i < sizeYLake)
+            while (i < 225)
             {
-                int sizeXLake = randomNumber.Next(15);
+                int[] positions = { positionYLake, positionXLake };
 
-                for (int a = 0; a < sizeXLake; a++)
+                this.position.Add(positions);
+
+
+                int positionXNumber = randomNumber.Next(positionXLake - 1, positionXLake + 2);
+                int positionYNumber = randomNumber.Next(positionYLake - 1, positionYLake + 2);
+
+                int[] verify = { positionXNumber, positionYNumber };
+
+                if ((positionXNumber == positionXLake && positionYNumber == positionYLake) || (this.position.Contains(verify)) || (positionXNumber < 0) || (1000 < positionXNumber) || (positionYNumber < 0) || (1000 < positionYNumber))
                 {
-                    int[] positions = { positionYLake + i, positionXLake + a - (positionXLake/2) };
-
-                    this.position.Add(positions);
+                    continue;
                 }
+                else
+                {
+                    positionXLake = positionXNumber;
+                    positionYLake = positionYNumber;
 
-                int positionNumber = randomNumber.Next(positionXLake - (positionXLake/2), positionXLake + (positionXLake / 2));
-
-                positionXLake = positionNumber;
-
-                i++;
+                    i++;
+                }
+                
             }
+        }
+
+        public void InsertLake(Terrain[,] map)
+        {
+
+            for (int i = 0; i < this.position.Count; i++)
+            {
+                int positionXBlock = this.position[i][1] % 10;
+                int positionYBlock = this.position[i][0] % 10;
+                int positionXTerrain = this.position[i][1] / 10;
+                int positionYTerrain = this.position[i][0] / 10;
+
+                int[,] terrain = map[positionXTerrain, positionYTerrain].GetTerrain();
+
+                terrain[positionXBlock, positionYBlock] = 1;
+            }
+
         }
 
     }

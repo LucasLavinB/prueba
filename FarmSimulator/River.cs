@@ -70,9 +70,16 @@ namespace FarmSimulator
 
                 int positionNumber = randomNumber.Next(previusNumber - 2, previusNumber + 3);
 
-                previusNumber = positionNumber;
+                if(positionNumber > 997 || positionNumber < 3)
+                {
+                    continue;
+                }
+                else
+                {
+                    previusNumber = positionNumber;
 
-                i++;
+                    i++;
+                }
             }
         }
 
@@ -88,11 +95,15 @@ namespace FarmSimulator
 
                 if (this.direction == true)
                 {
-                    map[positionXTerrain,positionYTerrain].GetTerrain()[positionXBlock,positionYBlock] = 1;
+                    int[,] terrain = map[positionXTerrain, positionYTerrain].GetTerrain();
+
+                    terrain[positionXBlock, positionYBlock] = 1;
                 }
                 else
                 {
-                    map[positionYTerrain, positionXTerrain].GetTerrain()[positionYBlock, positionXBlock] = 1;
+                    int[,] terrain = map[positionYTerrain, positionXTerrain].GetTerrain();
+
+                    terrain[positionYBlock, positionXBlock] = 1;
                 }
             }
 

@@ -43,7 +43,12 @@ namespace FarmSimulator
         //MENU PARA CREAR EL TERRENO
         public static void TerrainDesign()
         {
-            Map NuevoMapa = new Map();
+            Map newMap = new Map();
+
+            newMap.GenerateMap(true,true);
+
+            PrintMap.Render(newMap.GetMap());
+            
         }
     }
 }

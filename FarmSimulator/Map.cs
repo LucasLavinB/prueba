@@ -15,7 +15,7 @@ namespace FarmSimulator
 
         public Map()
         {
-            GenerateMap();
+            GenerateTerrain();
         }
         public Terrain[,] GetMap()
         {
@@ -27,31 +27,37 @@ namespace FarmSimulator
             if(createLake == true)
             {
                 Lake lake = new Lake();
-                //river.InsertLake(this.map);
+                this.lake = lake;
+
+                this.lake.InsertLake(this.map);
             }
 
             if(createRiver == true)
             {
                 River river = new River();
-                river.InsertRiver(this.map);
+                this.river = river;
+
+                this.river.InsertRiver(this.map);
             }
 
+            Farm farm = new Farm();
+            farm.GenerateFarm(this.map);
 
+            this.farm = farm;
+
+            this.farm.InsertFarm(this.map);
 
         }
 
-        //INSERTAR LAGO DENTRO DE LA MATRIZ DE MAPA
-        private void InsertLake(Lake lake)
+        private void GenerateTerrain()
         {
-            this.lake = lake;
 
-            var positionLake = this.lake.GetPosition();
-
-            for (int i = 0; i < positionLake.Count(); i++)
+            for(int i = 0; i < 100; i++)
             {
-
-                this.map[positionLake[i][1], positionLake[i][0]] = 1;
-
+                for(int j = 0; j < 100; j++)
+                {
+                    this.map[i, j] = new Terrain();
+                }
             }
         }
 
