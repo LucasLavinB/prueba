@@ -9,5 +9,10 @@ namespace FarmSimulator
     class Terrain
     {
         protected int[,] terrain = new int[10,10];
+
+        public int[,] GetTerrain()
+        {
+            return this.terrain;
+        }
     }
 }

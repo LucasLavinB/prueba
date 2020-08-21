@@ -76,9 +76,56 @@ namespace FarmSimulator
             }
         }
 
-        public void InsertRiver(Map map)
+        public void InsertRiver(Terrain[,] map)
         {
 
+            for(int i = 0; i < this.position.Count; i++)
+            {
+                int positionXBlock = this.position[i][1] % 10;
+                int positionYBlock = this.position[i][0] % 10;
+                int positionXTerrain = this.position[i][1] / 10;
+                int positionYTerrain = this.position[i][0] / 10;
+
+                if (this.direction == true)
+                {
+                    map[positionXTerrain,positionYTerrain].GetTerrain()[positionXBlock,positionYBlock] = 1;
+                }
+                else
+                {
+                    map[positionYTerrain, positionXTerrain].GetTerrain()[positionYBlock, positionXBlock] = 1;
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+            ////INSERTAR RIO
+            //private void InsertRiver(River river)
+            //{
+            //    this.river = river;
+
+            //    var positionRiver = this.river.GetPosition();
+
+            //    var directionRiver = this.river.GetDirection();
+
+            //    for (int i = 0; i < positionRiver.Count(); i++)
+            //    {
+            //        if (directionRiver == true)
+            //        {
+            //            this.map[positionRiver[i][0], positionRiver[i][1]] = 1;
+            //        }
+            //        else
+            //        {
+            //            this.map[positionRiver[i][1], positionRiver[i][0]] = 1;
+            //        }
+            //    }
+            //}
         }
     }
 }

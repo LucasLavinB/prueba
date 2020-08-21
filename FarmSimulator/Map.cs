@@ -13,15 +13,11 @@ namespace FarmSimulator
         private River river;
         private Farm farm;
 
-        public Map(int sizeMap)
+        public Map()
         {
-            int[,] map = new int[sizeMap, sizeMap];
-
-            this.map = map;
-            GenerateMap(true, true);
 
         }
-        public int[,] GetMap()
+        public Terrain[,] GetMap()
         {
             return this.map;
         }
@@ -31,13 +27,13 @@ namespace FarmSimulator
             if(createLake == true)
             {
                 Lake lake = new Lake();
-                InsertLake(lake);
+                river.InsertLake(this.map);
             }
 
             if(createRiver == true)
             {
                 River river = new River();
-                InsertRiver(river);
+                river.InsertRiver(this.map);
             }
 
 
