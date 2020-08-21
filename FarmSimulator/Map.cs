@@ -15,7 +15,7 @@ namespace FarmSimulator
 
         public Map()
         {
-
+            GenerateMap();
         }
         public Terrain[,] GetMap()
         {
@@ -27,7 +27,7 @@ namespace FarmSimulator
             if(createLake == true)
             {
                 Lake lake = new Lake();
-                river.InsertLake(this.map);
+                //river.InsertLake(this.map);
             }
 
             if(createRiver == true)

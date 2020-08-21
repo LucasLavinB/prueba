@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace FarmSimulator
@@ -9,62 +11,82 @@ namespace FarmSimulator
     static class PrintMap
     {
         //METODO ESTATICO PARA IMPRIMIR EN CONSOLA EL MAPA
-        public static void Render(Map map)
+        public static void Render(Terrain[,] map)
         {
 
-            //CODIGO PARA IMPRIMIR --SE TIENE QUE MEJORAR--
+            //CODIGO PARA IMPRIMIR
+            
+            //CADA TERRRENO EQUIVALDRA A DOS PIXELES █ █
 
-            int[,] matrix = map.GetMap();
-
-            for (int i = 0; i < 100; i++)
+            for( int i = 0; i < map.Length; i++)
             {
-                Console.WriteLine("");
+                //SALTO DE LINEA DE LA IMPRESION
+                Console.WriteLine();
 
-                for (int j = 0; j < 100; j++)
+                for(int j = 0; j < map.Length; j++)
                 {
+                    int counterLeft = 0;
+                    int counterRight = 0;
 
-                    if (i % 2 == 0)
+
+                    //RECORREMOS LOS BLOQUES DE LOS TERRENOS
+                    //Y DETERMINAMOS SI POSEEN MAS TIERRA QUE AGUA EN LA PARTE IZQUIERDA Y DERECHA
+                    for(int x = 0; x < 10; x++)
                     {
-                        if (j % 2 == 0)
+                        for(int y = 0; y < 10; y++)
                         {
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            if (matrix[j, i] == 1)
+                            int[,] terrain = map[i, j].GetTerrain();
+
+                            if(x < 3)
                             {
-                                Console.ForegroundColor = ConsoleColor.Blue;
+                                if(terrain[x, y] == 0)
+                                {
+                                    counterLeft++;
+                                }
                             }
-                        }
-                        else
-                        {
-                            Console.ForegroundColor = ConsoleColor.DarkGreen;
-                            if (matrix[j, i] == 1)
+
+                            if (x > 3)
                             {
-                                Console.ForegroundColor = ConsoleColor.Blue;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if (j % 2 == 0)
-                        {
-                            Console.ForegroundColor = ConsoleColor.DarkGreen;
-                            if (matrix[j, i] == 1)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Blue;
-                            }
-                        }
-                        else
-                        {
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            if (matrix[j, i] == 1)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Blue;
+                                if (terrain[x, y] == 0)
+                                {
+                                    counterRight++;
+                                }
                             }
                         }
                     }
 
-                    Console.Write(matrix[j,i]+" ");
+                    //SI POSEEN MAS TIERRA EN LA PARTE DERECHA SE IMPRIME EL PIXEL VERDE
+
+                    if(counterLeft >= 5)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+
+                        Console.Write("█");
+                    }
+                    if (counterLeft < 5)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+
+                        Console.Write("█");
+                    }
+                    if (counterRight >= 5)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+
+                        Console.Write("█");
+                    }
+                    if (counterRight < 5)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+
+                        Console.Write("█");
+                    }
+
+
                 }
             }
+
+           
         }
     }
 }
