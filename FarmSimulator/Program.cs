@@ -11,9 +11,7 @@ namespace FarmSimulator
     {
         static void Main(string[] args)
         {
-            Map map = new Map(100);
-
-            PrintMap.Render(map);
+            MenuManager.StartMenu();
 
             Console.ReadLine();
         }

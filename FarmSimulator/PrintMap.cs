@@ -28,21 +28,17 @@ namespace FarmSimulator
                         if (j % 2 == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.BackgroundColor = ConsoleColor.Green;
                             if (matrix[j, i] == 1)
                             {
                                 Console.ForegroundColor = ConsoleColor.Blue;
-                                Console.BackgroundColor = ConsoleColor.Blue;
                             }
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.DarkGreen;
-                            Console.BackgroundColor = ConsoleColor.DarkGreen;
                             if (matrix[j, i] == 1)
                             {
                                 Console.ForegroundColor = ConsoleColor.Blue;
-                                Console.BackgroundColor = ConsoleColor.Blue;
                             }
                         }
                     }
@@ -51,21 +47,17 @@ namespace FarmSimulator
                         if (j % 2 == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.DarkGreen;
-                            Console.BackgroundColor = ConsoleColor.DarkGreen;
                             if (matrix[j, i] == 1)
                             {
                                 Console.ForegroundColor = ConsoleColor.Blue;
-                                Console.BackgroundColor = ConsoleColor.Blue;
                             }
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.BackgroundColor = ConsoleColor.Green;
                             if (matrix[j, i] == 1)
                             {
                                 Console.ForegroundColor = ConsoleColor.Blue;
-                                Console.BackgroundColor = ConsoleColor.Blue;
                             }
                         }
                     }

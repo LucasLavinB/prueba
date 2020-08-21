@@ -8,7 +8,7 @@ namespace FarmSimulator
 {
     class Map
     {
-        protected int[,] map;
+        protected Terrain[,] map = new Terrain[100,100];
         private Lake lake;
         private River river;
         private Farm farm;
@@ -43,28 +43,8 @@ namespace FarmSimulator
 
 
         }
-        //INSERTAR RIO
-        private void InsertRiver(River river)
-        {
-            this.river = river;
 
-            var positionRiver = this.river.GetPosition();
-            
-            var directionRiver = this.river.GetDirection();
-
-            for(int i = 0; i < positionRiver.Count(); i++)
-            {
-                if(directionRiver == true)
-                {
-                    this.map[positionRiver[i][0], positionRiver[i][1]] = 1;
-                }
-                else
-                {
-                    this.map[positionRiver[i][1], positionRiver[i][0]] = 1;
-                }
-            }
-        }
-
+        //INSERTAR LAGO DENTRO DE LA MATRIZ DE MAPA
         private void InsertLake(Lake lake)
         {
             this.lake = lake;
@@ -74,7 +54,7 @@ namespace FarmSimulator
             for (int i = 0; i < positionLake.Count(); i++)
             {
 
-                    this.map[positionLake[i][1], positionLake[i][0]] = 1;
+                this.map[positionLake[i][1], positionLake[i][0]] = 1;
 
             }
         }

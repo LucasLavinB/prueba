@@ -55,11 +55,11 @@ namespace FarmSimulator
         {
             Random randomNumber = new Random();
 
-            int previusNumber = randomNumber.Next(100);
+            int previusNumber = randomNumber.Next(1000);
 
             int i = 0;
 
-            while (i < 100)
+            while (i < 1000)
             {
                 for (int a = 0; a < 5; a++)
                 {
@@ -74,6 +74,11 @@ namespace FarmSimulator
 
                 i++;
             }
+        }
+
+        public void InsertRiver(Map map)
+        {
+
         }
     }
 }
