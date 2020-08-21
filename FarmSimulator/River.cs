@@ -15,12 +15,12 @@ namespace FarmSimulator
         //CONSTRUCTOR DE LA CLASE
         public River()
         {
-            GenerateRiver();
+            GenerateRiver(); 
             GenerateDirection();
         }
 
         //METODOS DE ACCESO A ATRIBUTOS
-        public List<int[]> GetPosition()
+        public List<int[]> GetPosition() 
         {
             return this.position;
         }
@@ -50,7 +50,7 @@ namespace FarmSimulator
             }
         }
 
-        //GENERA UN RIO MEDIANTE NUMEROS ALEATORIOS QUE SE TIENEN QUE ENTRELAZAR
+        //GENERA UN RIO MEDIANTE NuMEROS ALEATORIOS QUE SE TIENEN QUE ENTRELAZAR
         public void GenerateRiver()
         {
             Random randomNumber = new Random();
@@ -65,7 +65,7 @@ namespace FarmSimulator
                 {
                     int[] positions = { i, previusNumber + a - 2 };
 
-                    this.position.Add(positions);
+                    this.position.Add(positions); //ANADIENDO POSICION
                 }
 
                 int positionNumber = randomNumber.Next(previusNumber - 2, previusNumber + 3);

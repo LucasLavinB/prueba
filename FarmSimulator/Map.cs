@@ -43,12 +43,13 @@ namespace FarmSimulator
 
 
         }
-
+        //INSERTAR RIO
         private void InsertRiver(River river)
         {
             this.river = river;
 
             var positionRiver = this.river.GetPosition();
+            
             var directionRiver = this.river.GetDirection();
 
             for(int i = 0; i < positionRiver.Count(); i++)
