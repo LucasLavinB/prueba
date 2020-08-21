@@ -18,7 +18,7 @@ namespace FarmSimulator
             int[,] map = new int[sizeMap, sizeMap];
 
             this.map = map;
-            GenerateMap(false, true);
+            GenerateMap(true, true);
 
         }
         public int[,] GetMap()
@@ -31,6 +31,7 @@ namespace FarmSimulator
             if(createLake == true)
             {
                 Lake lake = new Lake();
+                InsertLake(lake);
             }
 
             if(createRiver == true)
@@ -60,6 +61,20 @@ namespace FarmSimulator
                 {
                     this.map[positionRiver[i][1], positionRiver[i][0]] = 1;
                 }
+            }
+        }
+
+        private void InsertLake(Lake lake)
+        {
+            this.lake = lake;
+
+            var positionLake = this.lake.GetPosition();
+
+            for (int i = 0; i < positionLake.Count(); i++)
+            {
+
+                    this.map[positionLake[i][1], positionLake[i][0]] = 1;
+
             }
         }
 

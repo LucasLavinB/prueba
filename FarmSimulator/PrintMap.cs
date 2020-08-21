@@ -8,8 +8,12 @@ namespace FarmSimulator
 {
     static class PrintMap
     {
+        //METODO ESTATICO PARA IMPRIMIR EN CONSOLA EL MAPA
         public static void Render(Map map)
         {
+
+            //CODIGO PARA IMPRIMIR --SE TIENE QUE MEJORAR--
+
             int[,] matrix = map.GetMap();
 
             for (int i = 0; i < 100; i++)
@@ -24,17 +28,21 @@ namespace FarmSimulator
                         if (j % 2 == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            if(matrix[j, i] == 1)
+                            Console.BackgroundColor = ConsoleColor.Green;
+                            if (matrix[j, i] == 1)
                             {
                                 Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.BackgroundColor = ConsoleColor.Blue;
                             }
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            Console.BackgroundColor = ConsoleColor.DarkGreen;
                             if (matrix[j, i] == 1)
                             {
                                 Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.BackgroundColor = ConsoleColor.Blue;
                             }
                         }
                     }
@@ -43,22 +51,26 @@ namespace FarmSimulator
                         if (j % 2 == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            Console.BackgroundColor = ConsoleColor.DarkGreen;
                             if (matrix[j, i] == 1)
                             {
                                 Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.BackgroundColor = ConsoleColor.Blue;
                             }
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
+                            Console.BackgroundColor = ConsoleColor.Green;
                             if (matrix[j, i] == 1)
                             {
                                 Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.BackgroundColor = ConsoleColor.Blue;
                             }
                         }
                     }
 
-                    Console.Write(matrix[j,i]);
+                    Console.Write(matrix[j,i]+" ");
                 }
             }
         }

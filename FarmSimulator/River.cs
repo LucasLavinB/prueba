@@ -31,6 +31,9 @@ namespace FarmSimulator
         }
 
         //METODOS GENERADORES
+
+
+        //GENERA LA DIRECCION DEL RIO (VERTICAL U HORIZONTAL)
         public void GenerateDirection()
         {
             Random rnd = new Random();
@@ -47,6 +50,7 @@ namespace FarmSimulator
             }
         }
 
+        //GENERA UN RIO MEDIANTE NUMEROS ALEATORIOS QUE SE TIENEN QUE ENTRELAZAR
         public void GenerateRiver()
         {
             Random randomNumber = new Random();
