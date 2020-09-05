@@ -18,16 +18,16 @@ namespace FarmSimulator
 
             //CADA TERRRENO EQUIVALDRA A DOS PIXELES █ █
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10; i++)
             {
                 //SALTO DE LINEA DE LA IMPRESION
                 Console.WriteLine();
 
-                for(int j = 0; j < 100; j++)
+                for(int j = 0; j < 10; j++)
                 {
 
-                    int counter = 0;
-                    int counterFarm = 0;
+                    //int counter = 0;
+                    //int counterFarm = 0;
                     //int counterLeft = 0;
                     //int counterRight = 0;
 
@@ -40,13 +40,20 @@ namespace FarmSimulator
                         {
                             int[,] terrain = map[i, j].GetTerrain();
 
-                            if(terrain[x,y] == 1)
+                            if (terrain[x, y] == 0)
                             {
-                                counter++;
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.Write("█");
+                            }
+                            if (terrain[x,y] == 1)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.Write("█");
                             }
                             if (terrain[x, y] == 2)
                             {
-                                counterFarm++;
+                                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                                Console.Write("█");
                             }
                             //if(x < 5)
                             //{
@@ -68,21 +75,21 @@ namespace FarmSimulator
 
                     //SI POSEEN MAS TIERRA EN LA PARTE IZQUIERDA O DERECHA SE IMPRIME EL PIXEL VERDE
 
-                    if(counter > 0)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.Write("██");
-                    }
-                    if(counterFarm > 0)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write("██");
-                    }
-                    if(counter == 0 && counterFarm == 0)
-                    {
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Console.Write("██");
-                    }
+                    //if(counter > 0)
+                    //{
+                    //    Console.ForegroundColor = ConsoleColor.Blue;
+                    //    Console.Write("██");
+                    //}
+                    //if(counterFarm > 0)
+                    //{
+                    //    Console.ForegroundColor = ConsoleColor.Red;
+                    //    Console.Write("██");
+                    //}
+                    //if(counter == 0 && counterFarm == 0)
+                    //{
+                    //    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    //    Console.Write("██");
+                    //}
                     //if(counterLeft >= 50)
                     //{
                     //    Console.ForegroundColor = ConsoleColor.Green;

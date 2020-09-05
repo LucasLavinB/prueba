@@ -23,14 +23,14 @@ namespace FarmSimulator
 
             if (direction == 0)
             {
-                n = 980;
-                m = 990;
+                n = 98;
+                m = 99;
             }
 
             else
             {
-                n = 990;
-                m = 980;
+                n = 99;
+                m = 98;
             }
 
             while (true)

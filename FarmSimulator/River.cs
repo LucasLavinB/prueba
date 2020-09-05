@@ -55,11 +55,11 @@ namespace FarmSimulator
         {
             Random randomNumber = new Random();
 
-            int previusNumber = randomNumber.Next(1000);
+            int previusNumber = randomNumber.Next(100);
 
             int i = 0;
 
-            while (i < 1000)
+            while (i < 100)
             {
                 for (int a = 0; a < 5; a++)
                 {

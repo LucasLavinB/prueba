@@ -45,15 +45,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
+    <Compile Include="Block.cs" />
+    <Compile Include="Build.cs" />
+    <Compile Include="Consumable.cs" />
+    <Compile Include="Earth.cs" />
     <Compile Include="Farm.cs" />
+    <Compile Include="FinalProduct.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Lake.cs" />
+    <Compile Include="Land.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="Market.cs" />
     <Compile Include="MenuManager.cs" />
     <Compile Include="PrintMap.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Production.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ranch.cs" />
     <Compile Include="River.cs" />
+    <Compile Include="Seed.cs" />
+    <Compile Include="Storage.cs" />
     <Compile Include="Terrain.cs" />
+    <Compile Include="Water.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -8,7 +8,7 @@ namespace FarmSimulator
 {
     class Map
     {
-        protected Terrain[,] map = new Terrain[100,100];
+        protected Terrain[,] map = new Terrain[10,10];
         private Lake lake;
         private River river;
         private Farm farm;
@@ -52,9 +52,9 @@ namespace FarmSimulator
         private void GenerateTerrain()
         {
 
-            for(int i = 0; i < 100; i++)
+            for(int i = 0; i < 10; i++)
             {
-                for(int j = 0; j < 100; j++)
+                for(int j = 0; j < 10; j++)
                 {
                     this.map[i, j] = new Terrain();
                 }

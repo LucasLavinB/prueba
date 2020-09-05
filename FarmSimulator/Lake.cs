@@ -28,8 +28,8 @@ namespace FarmSimulator
         {
             Random randomNumber = new Random();
 
-            int positionYLake = randomNumber.Next(1000);
-            int positionXLake = randomNumber.Next(1000);
+            int positionYLake = randomNumber.Next(100);
+            int positionXLake = randomNumber.Next(100);
 
             int i = 0;
 

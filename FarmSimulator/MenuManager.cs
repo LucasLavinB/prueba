@@ -9,6 +9,20 @@ namespace FarmSimulator
 {
     static class MenuManager
     {
+        public static void GameMenu()
+        {
+
+        }
+
+        public static void LoadGameMenu()
+        {
+
+        }
+
+        public static void OptionsMenu()
+        {
+
+        }
         //INICO DEL PROGRAMA
         public static void StartMenu()
         {
@@ -25,7 +39,7 @@ namespace FarmSimulator
                 {
                     Console.WriteLine("Creando nuevo mapa...");
 
-                    TerrainDesign();
+                    NewGameMenu();
                 }
                 else if (option == "2")
                 {
@@ -42,7 +56,7 @@ namespace FarmSimulator
         }
 
         //MENU PARA CREAR EL TERRENO
-        public static void TerrainDesign()
+        public static void NewGameMenu()
         {
 
             Map NewMap = new Map();
