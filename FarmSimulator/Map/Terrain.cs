@@ -8,13 +8,13 @@ namespace FarmSimulator
 {
     class Terrain
     {
-        private int[,] terrain = new int[10,10];
-
+        private Block[,] terrain = new Block[10,10];
+        
         public Terrain()
         {
             
         }
-        public int[,] GetTerrain()
+        public Block[,] GetTerrain()
         {
             return this.terrain;
         }

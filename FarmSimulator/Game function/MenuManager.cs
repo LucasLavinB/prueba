@@ -10,6 +10,7 @@ namespace FarmSimulator
     static class MenuManager
     {
         //INICO DEL PROGRAMA
+        private Game game;
         public static void StartMenu()
         {
             Console.WriteLine("Bienvenido a FarmSimulator");
@@ -57,25 +58,25 @@ namespace FarmSimulator
                 if (option2=="1")
                 {
                     NewMap.GenerateMap(false, true);
-                    PrintMap.Render(NewMap.GetMap());
+                    PrintMap.RenderMap(NewMap.GetMap());
                     break;
                 }
                 else if ( option2=="2")
                 {
                      NewMap.GenerateMap(true, false);
-                    PrintMap.Render(NewMap.GetMap());
+                    PrintMap.RenderMap(NewMap.GetMap());
                     break;
                 }
                 else if (option2=="3")
                 {
                     NewMap.GenerateMap(true, true);
-                    PrintMap.Render(NewMap.GetMap());
+                    PrintMap.RenderMap(NewMap.GetMap());
                     break;
                 }
                 else if (option2 =="4")
                 {
                     NewMap.GenerateMap(false, false);
-                    PrintMap.Render(NewMap.GetMap());
+                    PrintMap.RenderMap(NewMap.GetMap());
                     break;
                 }
                 else
@@ -84,6 +85,23 @@ namespace FarmSimulator
                     continue;
                 }
             }
+        }
+        public static void GameMenu()
+        {
+
+        }
+ 
+        public static void NewGameMenu()
+        {
+
+        }
+        public static void LoadGameMenu()
+        {
+
+        }
+        public static void OptionsMenu()
+        {
+
         }
     }
 }

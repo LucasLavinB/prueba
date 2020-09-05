@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 
 namespace FarmSimulator
 {
-    class Program
+    class Ranch : Production
     {
-        static void Main(string[] args)
-        {
-            MenuManager.StartMenu();
-        }
+        private Animal animal;
+        private int food = 100;
     }
 }

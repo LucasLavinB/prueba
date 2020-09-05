@@ -11,7 +11,7 @@ namespace FarmSimulator
     static class PrintMap
     {
         //METODO ESTATICO PARA IMPRIMIR EN CONSOLA EL MAPA
-        public static void Render(Terrain[,] map)
+        public static void RenderMap(Terrain[,] map)
         {
 
             //CODIGO PARA IMPRIMIR
@@ -113,6 +113,11 @@ namespace FarmSimulator
             }
 
            
+        }
+
+        public static int RenderMenu(List<>options, string title)
+        {
+
         }
 
         //public static void ViewMatrix(Terrain[,] map)

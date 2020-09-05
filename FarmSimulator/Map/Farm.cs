@@ -9,7 +9,7 @@ namespace FarmSimulator
 {
     class Farm
     {
-        private List<int[]> position = new List<int[]>();
+        private List<Terrain> position = new List<Terrain>();
 
         public void GenerateFarm(Terrain[,] map)
         {

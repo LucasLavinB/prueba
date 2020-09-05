@@ -9,8 +9,8 @@ namespace FarmSimulator
     class Map
     {
         protected Terrain[,] map = new Terrain[100,100];
-        private Lake lake;
-        private River river;
+        private Lake lake = null;
+        private River river = null;
         private Farm farm;
 
         public Map()
