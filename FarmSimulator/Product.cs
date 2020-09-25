@@ -15,5 +15,7 @@ namespace FarmSimulator
         protected int timeProduction;
         protected int diseaseProbability;
         protected int diseasePenalty;
+        protected int baseSalePrice;
+        protected int purchasePrice;
     }
 }

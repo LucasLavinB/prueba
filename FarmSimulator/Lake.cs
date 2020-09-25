@@ -45,7 +45,7 @@ namespace FarmSimulator
 
                 int[] verify = { positionXNumber, positionYNumber };
 
-                if ((positionXNumber == positionXLake && positionYNumber == positionYLake) || (this.position.Contains(verify)) || (positionXNumber < 0) || (1000 < positionXNumber) || (positionYNumber < 0) || (1000 < positionYNumber))
+                if ((positionXNumber == positionXLake && positionYNumber == positionYLake) || (this.position.Contains(verify)) || (positionXNumber < 0) || (950 < positionXNumber) || (positionYNumber < 0) || (950 < positionYNumber))
                 {
                     continue;
                 }

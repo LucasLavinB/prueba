@@ -41,9 +41,13 @@ namespace FarmSimulator
             return true;
         }
 
-        public bool NewGame()
+        public void NewGame()
         {
-            return true;
+            turn = 1;
+            money = 50000;
+            Console.WriteLine("Fecha de creacion: " + creationDate);
+            Console.WriteLine("Dinero disponible: " + money);
+                        
         }
     }
 }

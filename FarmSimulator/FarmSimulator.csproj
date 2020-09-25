@@ -46,18 +46,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="Consumables\AnimalWater.cs" />
+    <Compile Include="Consumables\AnimalFeed.cs" />
     <Compile Include="Block.cs" />
     <Compile Include="Build.cs" />
-    <Compile Include="Consumable.cs" />
+    <Compile Include="Consumables\Consumable.cs" />
     <Compile Include="Earth.cs" />
     <Compile Include="Farm.cs" />
+    <Compile Include="Consumables\Fertilizer.cs" />
     <Compile Include="FinalProduct.cs" />
+    <Compile Include="Consumables\Fungicide.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="Consumables\Irrigation.cs" />
+    <Compile Include="Consumables\Herbicide.cs" />
     <Compile Include="Lake.cs" />
     <Compile Include="Land.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Market.cs" />
     <Compile Include="MenuManager.cs" />
+    <Compile Include="Consumables\Pesticide.cs" />
     <Compile Include="PrintMap.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Production.cs" />
@@ -68,6 +75,7 @@
     <Compile Include="Seed.cs" />
     <Compile Include="Storage.cs" />
     <Compile Include="Terrain.cs" />
+    <Compile Include="Consumables\Vaccine.cs" />
     <Compile Include="Water.cs" />
   </ItemGroup>
   <ItemGroup>
